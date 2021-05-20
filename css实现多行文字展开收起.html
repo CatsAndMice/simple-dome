@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 父级为flex,gird时，子级可以使用百分比定宽高*/
+        .wrap {
+            display: inline-flex;
+            font-size: 25px;
+            padding: 15px;
+            background: #fff;
+            box-shadow: 0 0 15px #ccc;
+            margin: 15px auto;
+            border-radius: 8px;
+        }
+
+        .text {
+            font-size: 16px;
+            margin: 20px auto;
+            width: 800px;
+            line-height: 1;
+            /* em*父级元素字体大小 */
+            max-height: 3em;
+            overflow: hidden;
+            position: relative;
+        }
+
+
+        /* 右浮动，使文字环绕,高度设置为它父级的高度，减去下方展开收起按钮的高度 */
+        .text::before {
+            content: "";
+            float: right;
+            height: 100%;
+            margin-bottom: -1em;
+            background: red;
+        }
+
+        /* 障眼法,字数没有超出时,将展开收起用伪元素覆盖 */
+        .text::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+        }
+
+        /* 清除右浮动，使其位于下方位置， */
+        .btn {
+            float: right;
+            clear: both;
+            position: relative;
+            margin-left: 15px;
+        }
+
+        /* 自行打省略号... */
+        .btn::before {
+            content: '...';
+            position: absolute;
+            left: -5px;
+            transform: translateX(-100%);
+        }
+
+        .btn::after {
+            content: "展开";
+            background: rgb(46, 9, 168);
+            color: #fff;
+            font-size: 12px;
+            padding: 0px 4px;
+            line-height: 1;
+            height: 1em;
+            border-radius: 2px;
+            display: inline-block;
+        }
+
+
+        .inp {
+            display: none;
+        }
+
+        .inp:checked+.text {
+            max-height: 999em;
+        }
+
+        /* 借助input+lable 来做展开收起的交互效果 */
+        .inp:checked+.text .btn::before {
+            visibility: hidden;
+        }
+
+        .inp:checked+.text .btn::after {
+            content: "收到";
+        }
+
+        .inp:checked+.text::after {
+            /* background: transparent; */
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <input type="checkbox" id="postion" class="inp">
+        <div class="text">
+            <label for="postion" class="btn"></label>
+            浮动元素是如何定位的
+            正如我们前面提到的那样，当一个元素浮动之后，它会被移出正常的文档流，然后向左或者向右平移，一直平移直到碰到了所处的容器的边框，或者碰到另外一个浮动的元素。
+            在下面的图片中，有三个红色的正方形。其中有两个向左浮动，一个向右浮动。要注意到第二个向左浮动的正方形被放在第一个向左浮动的正方形的右边。如果还有更多的正方形这样浮动，它们会继续向右堆放，直到填满容器一整行，之后换行至下一行。
+        </div>
+    </div>
+    <div class="wrap">
+        <input type="checkbox" id="postion" class="inp">
+        <div class="text">
+            <label for="postion" class="btn"></label>
+            浮动元素是如何定位的动元素是如何定位的 正如我们前面提到
+            浮动元素是如何定位的 正如我们前面提到的那样，当一个元素浮浮动元素是如何定位的 正如我们前面提到的那样，当一个元素浮
+            浮动元素是如何定位的 正如我们前面提到的那样，当一个元素浮浮动元素是如何定位的 正如我们前面提到的那样，当一个元素浮
+        </div>
+    </div>
+</body>
+
+</html>
