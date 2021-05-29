@@ -1,0 +1,71 @@
+.my-card{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 180px;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.my-card img{
+    width: 700px;
+    height: 300px;
+}
+.pad{
+    color: #969696;
+    margin-left: 15px;
+    width: 700px;
+    display: inline-block;
+}
+.title-card{
+    color: #000;
+    margin-bottom: 15px;
+}
+.title-card:hover{
+    color: #ff6637;
+}
+
+.text-item{
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    height: 84px;
+    padding-bottom: 40px;
+    border-bottom: 1px dotted #ccc;
+    margin: auto;
+    margin-bottom: 40px;
+    width: 90%;
+    /* justify-content: center; */
+}
+.text-item-left{
+    width: 84px;
+    height: 84px;
+    background: #f2f2f2;
+    color: #666666;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.day{
+    font-size: 20px;
+}
+.text-item-right{
+    margin-left: 15px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    width: 85%;
+}
+.text-item-right h3{
+    font-size: 18px;
+    font-family: 微软雅黑;
+    color: #202020;
+    font-weight: normal;
+}
+.text-item-right h3:hover{
+    color: #ff6637;
+}
