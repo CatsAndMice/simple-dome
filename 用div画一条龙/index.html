@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #000;
+        }
+
+        .contian {
+            position: relative;
+
+        }
+
+        .bubble {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contian">
+        <canvas class="my-canvas"></canvas>
+    </div>
+
+    <script>
+        const canvas = document.getElementsByClassName("my-canvas")[0],
+            image = document.createElement('img'),
+            contian = document.getElementsByClassName('contian')[0];
+        image.src = './黑白龙.jfif';
+        image.onload = () => {
+            canvas.width = image.width;
+            canvas.height = image.height;
+            drawImage();
+        }
+        function drawImage() {
+            let ctx = canvas.getContext('2d');
+            ctx.drawImage(image, 0, 0);
+            let data = ctx.getImageData(0, 0, image.width, image.height).data,
+                gap = 6,
+                drawScale = 2;//放大陪数,越小越密集
+
+            //将canvas与最外层背景设置为同色 
+            ctx.fillStyle = "#000";
+            ctx.fillRect(0, 0, image.width, image.height);
+
+
+            //循环像素点
+            for (let h = image.height; h > 0; h -= gap) {
+                for (let w = image.width; w > 0; w -= gap) {
+                    //读取第h行,第w列像素r,g,b,a值 ， 计算规则https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
+                    let postion = (image.width * h + w) * 4,
+                        r = data[postion], g = data[postion + 1], b = data[postion + 2];
+                    if (r + g + b == 0) {
+                        let bubble = document.createElement("img");
+                        bubble.src = "./witeBubble.jfif";
+                        bubble.setAttribute("class", "bubble");
+                        //随机容器大小
+                        let size = Math.random() * 10 + 20;
+                        bubble.style.left = (w * drawScale - size / 2) + 'px';
+                        bubble.style.top = (h * drawScale - size / 2) + 'px';
+                        bubble.style.width = bubble.style.height = size + 'px';
+                        contian.appendChild(bubble)
+                    }
+                }
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
