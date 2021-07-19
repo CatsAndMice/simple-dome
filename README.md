@@ -8,3 +8,6 @@
 
 ## css实现多行文字展开收起
 <a href="https://lihai-boop.github.io/simple-dome/css%E5%AE%9E%E7%8E%B0%E5%A4%9A%E8%A1%8C%E6%96%87%E5%AD%97%E5%B1%95%E5%BC%80%E6%94%B6%E8%B5%B7.html">https://lihai-boop.github.io/simple-dome/css%E5%AE%9E%E7%8E%B0%E5%A4%9A%E8%A1%8C%E6%96%87%E5%AD%97%E5%B1%95%E5%BC%80%E6%94%B6%E8%B5%B7.html</a>
+
+## counter实现九宫格图片展示
+<a href="https://lihai-boop.github.io/simple-dome/counter%E5%AE%9E%E7%8E%B0%E4%B9%9D%E5%AE%AB%E6%A0%BC%E5%9B%BE%E7%89%87%E5%B1%95%E7%A4%BA.html">https://lihai-boop.github.io/simple-dome/counter实现九宫格图片展示</a>
