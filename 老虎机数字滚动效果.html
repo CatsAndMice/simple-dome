@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            --i: 2;
+        }
+
+        .scroll-num {
+            width: var(--width, 20px);
+            height: var(--heigth, 20px);
+            line-height: var(--heigth, 20px);
+            text-align: center;
+            background-color: #ccc;
+            margin: 100px auto;
+            animation: scroll-num 1s calc(var(--i) * 1s) linear forwards;
+            overflow: hidden;
+        }
+
+        ul {
+            animation: move .3s linear infinite,
+                jumpy 1s calc(var(--i) * 1s) linear forwards;
+        }
+
+        @keyframes move {
+            from {
+                filter: url(#blur);
+                transform: translateY(-90%);
+            }
+
+            to {
+                filter: url(#blur);
+                transform: translateY(1%);
+            }
+        }
+
+
+        /* 11个li 计算每个li的高度转化成百分比 */
+        @keyframes jumpy {
+            25% {
+                filter: none;
+                transform: translateY(calc(var(--i) * -9.09%) + 3%);
+            }
+
+            50% {
+                transform: translateY(calc(var(--i) * -9.09% - 1%));
+            }
+
+            75% {
+                transform: translateY(calc(var(--i) * -9.09% + 1%));
+            }
+
+            to {
+                transform: translateY(calc(var(--i) * -9.09%));
+            }
+
+        }
+
+        @keyframes scroll-num {
+            25% {
+                transform: translateY(8%);
+            }
+
+            50% {
+                transform: translateY(-4%);
+            }
+
+            70% {
+                transform: translateY(2%);
+            }
+
+            80% {
+                transform: translateY(-1%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scroll-num">
+        <ul>
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>0</li>
+        </ul>
+        <!-- svg实现一个y轴模糊的效果 -->
+        <svg width="0" height="0">
+            <filter id="blur">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="0 1" />
+            </filter>
+        </svg>
+    </div>
+
+</body>
+
+</html>
