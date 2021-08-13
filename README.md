@@ -1,6 +1,6 @@
 > 记录日常中有趣的前端效果, 点击链接察看效果
 
-<a href="https://lihai-boop.github.io/simple-dome/%E7%82%AB%E9%85%B7%E6%BB%9A%E5%8A%A8%E6%8C%89%E9%92%AE.html">炫酷滚动按钮</a>
+<a href="https://lihai-boop.github.io/simple-dome/%E6%8C%89%E9%92%AE/%E7%82%AB%E9%85%B7%E5%8A%A8%E6%80%81%E6%8C%89%E9%92%AE.html">炫酷动态按钮</a>
 
 <a href="https://lihai-boop.github.io/simple-dome/%E8%A1%8C%E6%98%9F%E8%87%AA%E8%BD%AC%E4%B8%8E%E5%85%AC%E8%BD%AC/main.html">行星公转自转</a>
 
