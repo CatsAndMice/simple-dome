@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #000;
+        }
+        .div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100px;
+            background-color: #0396FF;
+            height: 100px;
+            transform-origin: center;
+            margin: 100px auto;
+            /* 图像先旋转, 倾斜,收缩x,y轴 达到一个三角形的图形*/
+            transform: rotate(60deg) skewX(30deg) scale(1, .85);
+            border-top-left-radius: 30px;
+            position: relative;
+        }
+
+        .div::after,
+        .div::before {
+            position: absolute;
+            content: "";
+            border-top-left-radius: 30px;
+            width: 100%;
+            height: 100%;
+            background-color: #0396FF;
+        }
+
+        .div::after {
+            transform: rotate(90deg) skewY(45deg) translateY(-50%);
+        }
+
+        .div::before {
+            transform: rotate(-90deg) skewX(45deg) translateX(-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div"></div>
+</body>
+
+</html>
