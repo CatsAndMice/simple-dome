@@ -1,5 +1,7 @@
 > 记录日常中有趣的前端效果, 点击链接察看效果
 
+<a href="https://codepen.io/lihai-boop/pen/QWgpoPN">hover效果button</a>
+
 <a href="https://codepen.io/lihai-boop/pen/KKqpdaP">仿掘金字体加载效果</a>
 
 <a href="https://codepen.io/lihai-boop/pen/PojoqPR">拼接一个带有圆角的三角形</a>
