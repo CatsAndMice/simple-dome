@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            position: relative;
+            background-color: #ccc;
+            background: linear-gradient(to right top, red 0% 50%, #fff 50% 100%);
+            /*滚到底部,进度条撑满宽口 */
+            background-size: 100% calc(100% - 100vh + 5px);
+            background-repeat: no-repeat;
+        }
+
+        body::after {
+            content: "";
+            /* 相对窗口定位 */
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 5px;
+            bottom: 0;
+            z-index: -1;
+            background-color: #fff;
+        }
+
+        .div {
+            padding-top: 2000px;
+        }
+    </style>
+</head>
+
+<body>
+    请向下滚动
+    <div class="div">
+        我是有底线的
+    </div>
+</body>
+
+</html>
