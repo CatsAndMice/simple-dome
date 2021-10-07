@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-image: url(https://w.wallhaven.cc/full/wq/wallhaven-wqdx57.jpg);
+            background-size: cover;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .dialog-view {
+            width: 100vw;
+            height: 100vh;
+            opacity: 1;
+            background-color: rgb(89, 89, 92, 0.5);
+            /* 使用与filter属性一样 */
+            backdrop-filter: blur(8px);
+        }
+
+        .dialog {
+            position: absolute;
+            background-color: #fff;
+            left: 50%;
+            top: 50%;
+            border-radius: 5px;
+            padding: 10px 15px;
+            min-width: 300px;
+            overflow: hidden;
+            transform: translate(-50%, -50%);
+        }
+
+        .dialog-name {
+            text-align: right;
+            font-size: 12px;
+            margin: 8px 0;
+        }
+
+        .btn {
+            float: right;
+            outline: none;
+            border: 0;
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 5px;
+            background-color: rgb(235, 125, 51);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dialog-view">
+        <div class="dialog">
+            <p class="dialog-text">取消高斯模糊效果</p>
+            <p class="dialog-name">— 微信公众号搜索隔壁姥爷</p>
+            <button class="btn">确定</button>
+        </div>
+    </div>
+
+    <script>
+        let btn = document.getElementsByClassName("btn")[0];
+        btn.onclick = function () {
+            let view = document.getElementsByClassName('dialog-view')[0];
+            view.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
