@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            width: 200px;
+            height: 200px;
+            margin: 60px auto;
+            /* border: 1px solid #ccc; */
+            position: relative;
+        }
+
+        .round {
+            top: 0;
+            position: absolute;
+            width: 100px;
+            height: 100%;
+            overflow: hidden;
+
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            right: 0;
+        }
+
+        .circleProgress {
+            position: absolute;
+            top: 0;
+            width: 184px;
+            transform: rotate(45deg);
+            height: 184px;
+            border-radius: 50%;
+            border: 8px solid red;
+        }
+
+        .leftcircle {
+            left: 0;
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+            animation: leftMove 15s linear infinite forwards;
+        }
+
+        .rightcircle {
+            right: 0;
+            border-top-color: transparent;
+            border-right-color: transparent;
+            animation: rightMove 15s linear infinite forwards;
+        }
+
+
+        @keyframes leftMove {
+            0% {
+                transform: rotate(45deg);
+            }
+
+            /* 等待右圆已完成一圈,才开始旋转 */
+            50% {
+                transform: rotate(45deg);
+            }
+
+            100% {
+                transform: rotate(225deg);
+            }
+        }
+
+        /*  旋转一圈*/
+        @keyframes rightMove {
+            0% {
+                transform: rotate(45deg);
+            }
+
+            50% {
+                transform: rotate(225deg);
+            }
+
+            100% {
+                transform: rotate(225deg);
+            }
+        }
+
+        .num {
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            font-weight: 600px;
+            font-size: 25px;
+            color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="round right">
+            <div class="circleProgress rightcircle"></div>
+        </div>
+        <div class="round left">
+            <div class="circleProgress leftcircle"></div>
+        </div>
+        <div class="num"><span class="number">0</span>%</div>
+    </div>
+    <script>
+        let num = document.getElementsByClassName('number')[0]
+        let i = 0;
+        let circleProgress = document.getElementsByClassName('circleProgress')[0]
+        circleProgress.addEventListener('webkitAnimationStart', () => {
+           setInterval(() => {
+                i++;
+                i = i > 100 ? 0 : i
+                num.innerHTML = i
+            }, 150)
+        })
+    </script>
+</body>
+
+</html>
