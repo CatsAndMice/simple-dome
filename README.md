@@ -8,7 +8,9 @@
 
 <a href="https://codepen.io/lihai-boop/pen/YzxKZYv">backdrop-filter实现高斯模糊</a>
 
-<a href="https://codepen.io/lihai-boop/pen/powBXVy">一行代码实现头像与国旗融合</a>
+<a href="https://codepen.io/lihai-boop/pen/powBXVy">一行代码实现头像与国旗融合</a>  
+
+![一行代码实现头像与国旗融合](https://i.bmp.ovh/imgs/2021/10/23e40aaf46641a7e.png)
 
 <a href="https://codepen.io/lihai-boop/pen/powBvJW">滚动进度条</a>
 
