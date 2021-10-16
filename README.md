@@ -1,6 +1,8 @@
 > 记录日常中有趣的前端效果, 点击链接察看效果  
 
-<a href="https://codepen.io/lihai-boop/pen/vYJLeLg">动态进度条圆</a>
+<a href="https://codepen.io/lihai-boop/pen/vYJLeLg">动态进度条圆</a> 
+
+![进度条圆](https://i.bmp.ovh/imgs/2021/10/a9902197201df79e.gif)
 
 <a href="https://codepen.io/lihai-boop/pen/eYEmNjE">background系列实现下划线</a>
 
