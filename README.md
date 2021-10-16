@@ -1,5 +1,7 @@
 > 记录日常中有趣的前端效果, 点击链接察看效果  
 
+<a href="https://codepen.io/lihai-boop/pen/vYJLeLg">动态进度条圆</a>
+
 <a href="https://codepen.io/lihai-boop/pen/eYEmNjE">background系列实现下划线</a>
 
 <a href="https://codepen.io/lihai-boop/pen/YzxKZYv">backdrop-filter实现高斯模糊</a>
