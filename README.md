@@ -4,7 +4,8 @@
 
 ![进度条圆](https://i.bmp.ovh/imgs/2021/10/a9902197201df79e.gif)
 
-<a href="https://codepen.io/lihai-boop/pen/eYEmNjE">background系列实现下划线</a>
+<a href="https://codepen.io/lihai-boop/pen/eYEmNjE">background系列实现下划线</a>  
+![background系列实现下划线](https://i.bmp.ovh/imgs/2021/10/274064fe1c69902f.gif)
 
 <a href="https://codepen.io/lihai-boop/pen/YzxKZYv">backdrop-filter实现高斯模糊</a>
 
