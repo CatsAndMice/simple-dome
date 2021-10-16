@@ -21,6 +21,7 @@
 <a href="https://codepen.io/lihai-boop/pen/PojoqPR">拼接一个带有圆角的三角形</a>
 
 <a href="https://codepen.io/lihai-boop/pen/WNjVEQJ">波浪</a>  
+![波浪](https://i.bmp.ovh/imgs/2021/10/0af47b03d3100cdb.gif)
 
 <a href="https://lihai-boop.github.io/simple-dome/%E6%8C%89%E9%92%AE/%E6%8C%89%E9%92%AEhover%E5%8A%A8%E7%94%BB.html">按钮hover动画</a>
 
